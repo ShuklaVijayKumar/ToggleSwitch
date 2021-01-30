@@ -1,0 +1,142 @@
+<html>
+<head>
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        html {
+            display: table;
+            margin: auto;
+        }
+
+        body {
+            display: table-cell;
+            vertical-align: middle;
+            background-color:azure;
+        }
+        .onoffswitchlbl {
+            text-align: center;
+            font-family: Trebuchet, Arial, sans-serif;
+            font-weight: bold;
+            margin-bottom:5px;
+        }
+        .onoffswitch {
+            position: relative;
+            width: 200px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .onoffswitch-checkbox {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .onoffswitch-label {
+            display: block;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid #999999;
+            border-radius: 50px;
+        }
+
+        .onoffswitch-inner {
+            display: block;
+            width: 200%;
+            margin-left: -100%;
+            transition: margin 0.3s ease-in 0s;
+        }
+
+            .onoffswitch-inner:before, .onoffswitch-inner:after {
+                display: block;
+                float: left;
+                width: 50%;
+                height: 75px;
+                padding: 0;
+                line-height: 75px;
+                font-size: 14px;
+                color: white;
+                font-family: Trebuchet, Arial, sans-serif;
+                font-weight: bold;
+                box-sizing: border-box;
+            }
+
+            .onoffswitch-inner:before {
+                content: "Busy";
+                padding-left: 10px;
+                background-color: #C2344A;
+                color: #FFFFFF;
+            }
+
+            .onoffswitch-inner:after {
+                content: "Free";
+                padding-right: 30px;
+                background-color: #1A8C1A;
+                color: #FAF5F5;
+                text-align: right;
+            }
+
+        .onoffswitch-switch {
+            display: block;
+            width: 42px;
+            margin: 16.5px;
+            background: #FFFFFF;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 121px;
+            border: 2px solid #999999;
+            border-radius: 50px;
+            transition: all 0.3s ease-in 0s;
+        }
+
+        .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+            margin-left: 0;
+        }
+
+        .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+            right: 0px;
+        }
+    </style>
+</head>
+<body>
+    <table style="text-align:center">
+        
+        <tr>
+            <td>
+                <div class="onoffswitchlbl">Development 1</div>
+                <div class="onoffswitch">
+                    <input type="checkbox" name="onoffswitch1" class="onoffswitch-checkbox" id="myonoffswitch1" tabindex="0" checked>
+                    <label class="onoffswitch-label" for="myonoffswitch1">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                    </label>
+                </div>
+            </td>
+            <td>
+                <div class="onoffswitchlbl">Development 2</div>
+                <div class="onoffswitch">
+                    <input type="checkbox" name="onoffswitch2" class="onoffswitch-checkbox" id="myonoffswitch2" tabindex="1" checked>
+                    <label class="onoffswitch-label" for="myonoffswitch2">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                    </label>
+                </div>
+            </td>
+            <td>
+                <div class="onoffswitchlbl">Development 3</div>
+                <div class="onoffswitch">
+                    <input type="checkbox" name="onoffswitch3" class="onoffswitch-checkbox" id="myonoffswitch3" tabindex="2" checked>
+                    <label class="onoffswitch-label" for="myonoffswitch3">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                    </label>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
